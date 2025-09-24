@@ -25,10 +25,11 @@ export default function RegisterSection() {
     <div className="min-h-screen flex flex-col lg:flex-row">
       {/* Left side - Hero content */}
       <div className="flex-1 relative overflow-hidden min-h-[50vh] lg:min-h-screen">
+        {/* < className="flex-1 relative overflow-hidden min-h-[50vh] lg:min-h-screen"> */}
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&h=800&fit=crop&auto=format')",
+            backgroundImage: "url('/assets/images/backgrounds/items-3.png')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#0DBD9F]/80 via-[#0d6ebb]/60 to-[#0DBD9F]/40" />
@@ -39,22 +40,23 @@ export default function RegisterSection() {
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-2">
               <img 
-                src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=32&h=32&fit=crop&auto=format"
+                src="/assets/images/logo.png"
                 alt="LearnHub Logo"
                 className="w-6 h-6 rounded object-cover"
               />
             </div>
-            <span className="text-white font-bold text-xl">LEARNHUB</span>
+            <span className="text-white font-bold text-xl">Academy</span>
           </div>
 
           {/* Main content */}
-          <div className="max-w-md">
-            <h1 className="text-4xl font-bold text-white mb-6">Vous n'avez pas de compte ?</h1>
-            <p className="text-white/90 text-lg leading-relaxed mb-8">
-              Inscrivez-vous pour accéder à toutes les fonctionnalités de notre plateforme d'apprentissage. 
-              Commencez votre parcours éducatif et libérez votre potentiel dès aujourd'hui !
-            </p>
-          </div>
+                <div className="max-w-md">
+                <h1 className="text-4xl font-bold text-white my-6">Pas encore de compte ?</h1>
+                <p className="text-white/90 text-lg leading-relaxed mb-8">
+                    Inscrivez-vous dès maintenant pour rejoindre BLUE ACADEMY, la plateforme de formation en ligne 
+                    dédiée à la protection de l’environnement. Accédez à nos cours interactifs, suivez vos progrès, 
+                    et obtenez des certifications reconnues pour valoriser votre engagement.
+                </p>
+                </div>
 
           {/* Social links */}
           <div className="flex gap-4">

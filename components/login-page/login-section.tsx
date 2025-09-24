@@ -27,7 +27,7 @@ export default function LoginSection() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1200&h=800&fit=crop&auto=format')",
+            backgroundImage: "url('/assets/images/backgrounds/items-4.png')",
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-[#0d6ebb]/80 via-[#0DBD9F]/60 to-[#0d6ebb]/40" />
@@ -38,22 +38,24 @@ export default function LoginSection() {
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-2">
               <img 
-                src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=32&h=32&fit=crop&auto=format"
+                src="/assets/images/logo.png"
                 alt="LearnHub Logo"
                 className="w-6 h-6 rounded object-cover"
               />
             </div>
-            <span className="text-white font-bold text-xl">LEARNHUB</span>
+            <span className="text-white font-bold text-xl">Academy</span>
           </div>
 
           {/* Main content */}
-          <div className="max-w-md">
-            <h1 className="text-4xl font-bold text-white mb-6">Vous avez déjà un compte ?</h1>
+            <div className="max-w-md">
+            <h1 className="text-4xl font-bold text-white my-6">Vous avez déjà un compte ?</h1>
             <p className="text-white/90 text-lg leading-relaxed mb-8">
-              Bon retour ! Connectez-vous pour continuer votre parcours d'apprentissage et accéder à tous vos cours, 
-              votre progression et vos réalisations.
+                Bon retour sur BLUE ACADEMY ! Connectez-vous pour poursuivre votre parcours de formation en ligne, 
+                accéder à l’ensemble de vos cours interactifs, suivre vos progrès, consulter vos certificats, 
+                et continuer à développer vos compétences pour contribuer activement à la protection de l’environnement.
             </p>
-          </div>
+            </div>
+
 
           {/* Social links */}
           <div className="flex gap-4">

@@ -146,7 +146,7 @@ export function HeroSection() {
 
         {/* Main Heading adapté à BLUE ACADEMY */}
         <div className="text-center mb-16 max-w-4xl px-4">
-        <h2 className="text-5xl md:text-7xl font-bold text-[#0d6ebb] mb-8 leading-tight">
+        <h2 className="text-4xl md:text-6xl font-bold text-[#0d6ebb] mb-8 leading-tight">
             Formez-vous pour
             <span className="block bg-gradient-to-r from-[#0d6ebb] to-[#0DBD9F] bg-clip-text text-transparent">
             Protéger l’Environnement
@@ -172,7 +172,7 @@ export function HeroSection() {
         </Link>
 
         {/* Indicateurs de cours avec plus d'espacement */}
-        <div className="flex gap-3 mt-4">
+        {/* <div className="flex gap-3 mt-4">
           {courses.map((_, index) => (
             <Button
               key={index}
@@ -184,7 +184,7 @@ export function HeroSection() {
               }`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   )
