@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { GraduationCap, BookOpen, Users, Trophy, Code, Briefcase } from "lucide-react"
+import Link from "next/link"
 
 const courses = [
   {
@@ -160,6 +161,7 @@ export function HeroSection() {
 
 
         {/* Bouton de connexion adapté à BLUE ACADEMY */}
+        <Link href="/login">
             <Button
             size="lg"
             className="px-10 py-8 text-xl font-bold bg-gradient-to-r from-[#0d6ebb] to-[#0DBD9F] hover:from-[#0DBD9F] hover:to-[#0d6ebb] text-white rounded-full transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl mb-12"
@@ -167,6 +169,7 @@ export function HeroSection() {
             Je participe
             <div className="ml-3 w-3 h-3 bg-white rounded-full animate-pulse" />
             </Button>
+        </Link>
 
         {/* Indicateurs de cours avec plus d'espacement */}
         <div className="flex gap-3 mt-4">
