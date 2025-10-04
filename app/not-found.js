@@ -4,24 +4,37 @@ import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col items-center justify-center text-center h-screen bg-gray-50">
+    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 px-6">
+      {/* Illustration */}
       <Image
-        src="/assets/images/illustrations/page-introuvable/404-erreur.png" 
+        src="/assets/images/illustrations/page-introuvable/404-erreur.png"
         alt="Page non trouvée"
-        width={400}
-        height={400}
-        className="mb-6"
+        width={450}
+        height={450}
+        className="mb-10 drop-shadow-lg"
       />
-      <p className="mt-4 text-xl font-semibold text-center text-black">Oops ! Nous rencontrons un problème avec la page</p>
-      <p className="mt-2 text-center text-gray-600">
-      Nous vous suggérons de revenir en arrière et d&apos;essayer un autre lien
+
+      {/* Texte principal */}
+      <h1 className="text-3xl md:text-4xl font-extrabold text-[#0d6ebb] mb-6 leading-snug">
+        Oups ! Cette page est introuvable
+      </h1>
+
+      {/* Texte secondaire */}
+      <p className="text-lg md:text-xl text-gray-700 max-w-2xl mb-4 leading-relaxed text-center">
+        Nous n’avons pas pu trouver la page que vous cherchez. 
+      </p>
+      <p className="text-base md:text-lg text-gray-500 max-w-xl mb-10 text-center">
+        Il est possible que le lien soit incorrect ou que la page ait été déplacée.  
+        Nous vous conseillons de retourner à l’accueil et de continuer votre navigation.
       </p>
 
-      <Link href="/" passHref>
+      {/* Bouton de retour */}
+      <Link href="/dashboard" passHref>
         <Button
-          as="a"
-          className="mt-6 bg-[#F77F00] hover:bg-[#E06F00] text-white px-8 py-3 rounded-full font-semibold transition-colors"
           size="lg"
+          className="px-10 py-5 text-lg font-semibold bg-gradient-to-r from-[#0d6ebb] to-[#0DBD9F] 
+                     hover:from-[#0DBD9F] hover:to-[#0d6ebb] text-white rounded-full 
+                     transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
         >
           Retour à l&apos;accueil
         </Button>

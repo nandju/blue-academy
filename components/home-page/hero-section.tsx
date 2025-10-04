@@ -85,7 +85,7 @@ export function HeroSection() {
         className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
-        <div className="absolute inset-0 bg-white/75" />
+        <div className="absolute inset-0 bg-white/55" />
         {/* <div className="absolute inset-0 bg-white/85 backdrop-blur-sm" /> */}
       </div>
 
@@ -105,44 +105,50 @@ export function HeroSection() {
           </div>
         </div>
 
-        {/* Rotating Cards avec plus d'espacement */}
-        <div className="relative w-full max-w-5xl h-96 mb-20">
-          <div className="absolute inset-0 flex items-center justify-center">
-            {courses.map((course, index) => {
-              const IconComponent = course.icon
-              return (
-                <Card
-                  key={course.id}
-                  className={`absolute w-80 h-80 transition-all duration-700 ease-in-out transform ${getCardPosition(index)} bg-white/95 backdrop-blur-sm border-[#0d6ebb]/20 hover:border-[#0DBD9F]/60 shadow-xl hover:shadow-2xl`}
-                >
-                  <div className="p-6 h-full flex flex-col">
-                    {/* Header avec icône */}
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className={`p-3 rounded-xl bg-gradient-to-r ${course.color} shadow-lg`}>
-                        <IconComponent className="h-6 w-6 text-white" />
-                      </div>
-                      <h3 className="font-bold text-lg text-[#0d6ebb]">{course.title}</h3>
+              {/* Rotating Cards avec plus d'espacement */}
+      <div className="relative w-full max-w-5xl h-96 mb-20">
+        <div className="absolute inset-0 flex items-center justify-center">
+          {courses.map((course, index) => {
+            const IconComponent = course.icon
+            return (
+              <Card
+                key={course.id}
+                className={`absolute w-72 h-72 md:w-80 md:h-80 transition-all duration-700 ease-in-out transform ${getCardPosition(index)} bg-white/95 backdrop-blur-sm border-2 border-[#0d6ebb]/40 hover:border-[#0DBD9F]/80 shadow-xl hover:shadow-2xl rounded-3xl overflow-hidden`}
+              >
+                {/* <Card
+                key={course.id}
+                className={`absolute w-80 h-80 transition-all duration-700 ease-in-out transform ${getCardPosition(index)} bg-white/95 backdrop-blur-sm border-[#0d6ebb]/20 hover:border-[#0DBD9F]/60 shadow-xl hover:shadow-2xl rounded-3xl overflow-hidden`}
+              > */}
+                {/* Image de fond avec overlay */}
+                <div className="absolute inset-0">
+                  <img 
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+                </div>
+                
+                {/* Contenu de la card */}
+                <div className="relative z-10 p-6 h-full flex flex-col">
+                  {/* Header avec icône */}
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className={`p-3 rounded-xl bg-gradient-to-r ${course.color} shadow-lg`}>
+                      <IconComponent className="h-6 w-6 text-white" />
                     </div>
-                    
-                    {/* Description */}
-                    <p className="text-gray-600 text-sm mb-6 flex-1 leading-relaxed">
-                      {course.description}
-                    </p>
-                    
-                    {/* Image de cours */}
-                    <div className="w-full h-32 rounded-xl overflow-hidden shadow-lg">
-                      <img 
-                        src={course.image}
-                        alt={course.title}
-                        className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
+                    <h3 className="font-bold text-lg text-white">{course.title}</h3>
                   </div>
-                </Card>
-              )
-            })}
-          </div>
+                  
+                  {/* Description */}
+                  <p className="text-white/90 text-sm mb-6 flex-1 leading-relaxed">
+                    {course.description}
+                  </p>
+                </div>
+              </Card>
+            )
+          })}
         </div>
+      </div>
 
         {/* Main Heading adapté à BLUE ACADEMY */}
         <div className="text-center mb-16 max-w-4xl px-4">
@@ -152,7 +158,8 @@ export function HeroSection() {
             Protéger l’Environnement
             </span>
         </h2>
-        <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto">
+        {/* <p className="text-xl text-gray-600 leading-relaxed max-w-2xl mx-auto"> */}
+        <p className="text-xl text-gray-800 leading-relaxed max-w-2xl mx-auto">
             Découvrez nos formations en ligne dédiées aux bénévoles de BLUE CI, 
             alliant savoir, engagement et certifications pour renforcer la lutte 
             contre la pollution plastique et préserver notre planète.
