@@ -9,15 +9,35 @@ const PREDEFINED_USER = {
   name: "Jean Dupont",
 };
 
+const ADMIN_USER = {
+  email: "admin@blue-academy.ci",
+  password: "admin2024",
+  name: "Administrateur",
+  role: "admin",
+};
+
 export function validateCredentials(email: string, password: string) {
-  const valid =
-    email.trim().toLowerCase() === PREDEFINED_USER.email &&
-    password === PREDEFINED_USER.password;
+  const emailLower = email.trim().toLowerCase();
+  
+  // Check student credentials
+  if (emailLower === PREDEFINED_USER.email && password === PREDEFINED_USER.password) {
+    return {
+      valid: true,
+      user: { email: PREDEFINED_USER.email, name: PREDEFINED_USER.name, role: "student" },
+    };
+  }
+  
+  // Check admin credentials
+  if (emailLower === ADMIN_USER.email && password === ADMIN_USER.password) {
+    return {
+      valid: true,
+      user: { email: ADMIN_USER.email, name: ADMIN_USER.name, role: "admin" },
+    };
+  }
+  
   return {
-    valid,
-    user: valid
-      ? { email: PREDEFINED_USER.email, name: PREDEFINED_USER.name }
-      : null,
+    valid: false,
+    user: null,
   };
 }
 
@@ -42,6 +62,10 @@ export async function isAuthenticated(): Promise<boolean> {
 
 export function getPredefinedUser() {
   return { email: PREDEFINED_USER.email, name: PREDEFINED_USER.name };
+}
+
+export function getAdminUser() {
+  return { email: ADMIN_USER.email, name: ADMIN_USER.name, role: ADMIN_USER.role };
 }
 
 export { AUTH_COOKIE_NAME };
