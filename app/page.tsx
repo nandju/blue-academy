@@ -1,24 +1,17 @@
-"use client"
+import { HeroSection } from '@/components/landing/sections/Hero';
+import BlueAcademy from '@/components/landing/sections/BlueAcademy';
+import Testimonials from '@/components/landing/sections/Testimonials';
+import CTA from '@/components/landing/sections/CTA';
+import { AboutSection } from '@/components/landing/sections/AboutSection';
+import { ProjectsShowcase } from '@/components/landing/sections/ProjectsShowcase';
 
-import { useState, useEffect } from "react"
-import { AnimatePresence } from "framer-motion"
-import LoaderPage from "@/components/loader-page/loader-page"
-import { HeroSection } from "@/components/home-page/hero-section"
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false)
-    }, 3000)
-
-    return () => clearTimeout(timer)
-  }, [])
-
   return (
     <div className="min-h-screen">
-      <AnimatePresence mode="wait">{isLoading ? <LoaderPage key="loader" /> : <HeroSection key="main" />}</AnimatePresence>
+      <HeroSection />
+      <AboutSection />
+      <ProjectsShowcase />
     </div>
-  )
+  );
 }

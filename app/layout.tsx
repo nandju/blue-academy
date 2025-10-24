@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins } from "next/font/google";
+import { Geist, Geist_Mono, Permanent_Marker, Poppins } from "next/font/google";
 import "./globals.css";
+import { Navbar } from "@/components/landing/Navbar";
 
 
 const geistSans = Geist({
@@ -13,6 +14,12 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const permanentMaker = Permanent_Marker({
+  variable: "--permanent-maker",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 const poppins = Poppins({
   variable: "--poppins",
   subsets: ["latin"],
@@ -21,8 +28,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "BLUE academy",
-  description: "La plateforme en ligne de l’ONG BLUE CI pour former, évaluer et certifier ses bénévoles dans la lutte contre la pollution plastique.",
+  title: "BLUE - Lutte contre la pollution plastique",
+  description: "Rejoignez BLUE dans notre mission de lutte contre la pollution plastique par l'action, l'éducation et l'innovation.",
 };
 
 export default function RootLayout({
@@ -33,10 +40,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${permanentMaker.variable} antialiased`}
       >
-        <div className="font-poppins max-w-screen-2xl mx-auto ">
-            
+        <div className="font-permanentMaker max-w-screen-2xl mx-auto ">
+            <Navbar />
              {children}
              
         </div>
