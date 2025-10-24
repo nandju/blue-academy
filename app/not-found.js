@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-100 px-6">
+    <div className="flex flex-col items-center justify-center h-screen mt-20 bg-gray-100 px-6">
       {/* Illustration */}
       <Image
         src="/assets/images/illustrations/page-introuvable/404-erreur.png"
@@ -29,7 +29,7 @@ export default function NotFound() {
       </p>
 
       {/* Bouton de retour */}
-      <Link href="/dashboard" passHref>
+      <Link href="/" passHref>
         <Button
           size="lg"
           className="px-10 py-5 text-lg font-semibold bg-gradient-to-r from-[#0d6ebb] to-[#0DBD9F] 
