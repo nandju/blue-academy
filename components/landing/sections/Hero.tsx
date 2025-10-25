@@ -12,12 +12,13 @@ export function HeroSection() {
       </video>
 
       {/* Gradient Overlay */}
-      <div
+      {/* <div
         className="absolute inset-0 bg-gradient-to-br from-[#0d6ebb]/80 to-[#0DBD9F]/80"
         style={{
           background: "linear-gradient(135deg, rgba(13, 110, 187, 0.5) 0%, rgba(13, 189, 159, 0.5) 100%)",
         }}
-      />
+      /> */}
+      <div className="absolute inset-0 bg-black/50" />
 
       {/* 🔹 Flou au bas de la section */}
       {/* <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-[#0d6ebb]/60 via-[#0d6ebb]/20 to-transparent backdrop-blur-lg pointer-events-none" /> */}
