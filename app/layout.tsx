@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Permanent_Marker, Poppins } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/landing/Navbar";
 import { Footer } from "@/components/landing/Footer";
+import PageWrapper from "@/components/loader-page/page-wrapper";
 
 
 const geistSans = Geist({
@@ -44,9 +45,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${permanentMaker.variable} antialiased`}
       >
         <div className="font-permanentMaker max-w-screen-2xl mx-auto ">
+          <PageWrapper>
             <Navbar />
              {children}
              <Footer />
+          </PageWrapper>
         </div>
       </body>
     </html>

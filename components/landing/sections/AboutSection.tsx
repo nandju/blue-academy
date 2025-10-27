@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button"
 export function AboutSection() {
   return (
     <section className="py-20 px-4 bg-gradient-to-br from-[#0d6ebb] to-[#0DBD9F]">
+      {/* py-20 */}
       <div className="max-w-6xl mx-auto">
         {/* Main content card with cream background */}
         <div className="bg-[#F5F5DC] rounded-3xl p-12 md:p-16 shadow-2xl">
