@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Permanent_Marker, Poppins } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/landing/Navbar";
+import { Footer } from "@/components/landing/Footer";
 
 
 const geistSans = Geist({
@@ -45,7 +46,7 @@ export default function RootLayout({
         <div className="font-permanentMaker max-w-screen-2xl mx-auto ">
             <Navbar />
              {children}
-             
+             <Footer />
         </div>
       </body>
     </html>
