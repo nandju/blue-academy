@@ -15,18 +15,18 @@ export default function NotFound() {
       />
 
       {/* Texte principal */}
-      <h1 className="text-3xl md:text-4xl font-extrabold text-[#0d6ebb] mb-6 leading-snug">
-        Oups ! Cette page est introuvable
+      <h1 className="text-2xl md:text-3xl font-bold text-[#0d6ebb] mb-4 text-center">
+        Page introuvable
       </h1>
 
       {/* Texte secondaire */}
-      <p className="text-lg md:text-xl text-gray-700 max-w-2xl mb-4 leading-relaxed text-center">
-        Nous n’avons pas pu trouver la page que vous cherchez. 
+      <p className="text-base md:text-lg text-gray-700 mb-3 text-center">
+        Désolé, cette page n’existe pas ou a été déplacée.
       </p>
-      <p className="text-base md:text-lg text-gray-500 max-w-xl mb-10 text-center">
-        Il est possible que le lien soit incorrect ou que la page ait été déplacée.  
-        Nous vous conseillons de retourner à l’accueil et de continuer votre navigation.
+      <p className="text-sm md:text-base text-gray-500 mb-8 text-center">
+        Retournez à l’accueil pour poursuivre votre navigation.
       </p>
+
 
       {/* Bouton de retour */}
       <Link href="/" passHref>
