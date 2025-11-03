@@ -8,7 +8,7 @@ export function HeroSection() {
     <section className="relative max-h-[calc(100vh-80px)] md:max-h-screen w-full mt-20 md:mt-10 lg:mt-0 overflow-hidden">
       {/* Video Background */}
       <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-        <source src="/assets/videos/Ocean _Sea_Waves_Drone.mp4" type="video/mp4" />
+        <source src="/assets/videos/ocean_loop.mp4" type="video/mp4" />
       </video>
 
       {/* Gradient Overlay */}
