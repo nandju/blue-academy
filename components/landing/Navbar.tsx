@@ -37,10 +37,11 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 font-poppins transition-all duration-500 border-b border-white/10 backdrop-blur-sm ${
         isScrolled
-          ? "bg-[#0d6ebb]/40 shadow-md" // 💧 effet lors du scroll
-          : "bg-[#0d6ebb]/95"
+          ? "bg-[#0d6ebb]/95 shadow-md" // 💧 Couleur quand on scroll
+          : "bg-transparent" // 🌫️ Transparent au début
       }`}
     >
+
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
